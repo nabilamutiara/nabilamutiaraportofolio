@@ -69,16 +69,18 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted transition-colors"
-              >
-                {item.name}
-              </button>
-            ))}
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border shadow-lg">
+            <div className="py-4 px-4 space-y-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/50 transition-colors rounded-lg"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>

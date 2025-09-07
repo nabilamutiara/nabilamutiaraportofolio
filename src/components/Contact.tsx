@@ -62,20 +62,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Let's Connect
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Ready to discuss opportunities, collaborate on projects, or explore how 
             my product management and technical expertise can benefit your organization.
           </p>
         </div>
 
         {/* Contact Methods */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
           {contactMethods.map((method, index) => {
             const IconComponent = method.icon;
             return (
@@ -85,22 +85,22 @@ const Contact = () => {
                   method.primary ? 'ring-2 ring-primary ring-opacity-20' : ''
                 }`}
               >
-                <CardHeader>
-                  <div className="mx-auto p-3 bg-primary/10 rounded-full w-fit mb-4">
-                    <IconComponent className="h-6 w-6 text-primary" />
+                <CardHeader className="p-4 sm:p-6">
+                  <div className="mx-auto p-2 sm:p-3 bg-primary/10 rounded-full w-fit mb-3 sm:mb-4">
+                    <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">{method.title}</CardTitle>
-                  <CardDescription>{method.description}</CardDescription>
+                  <CardTitle className="text-base sm:text-lg">{method.title}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">{method.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-4 sm:p-6 pt-0">
                   <Button 
                     variant={method.primary ? "default" : "outline"} 
-                    className={method.primary ? "hero-gradient hover:opacity-90" : ""}
+                    className={`${method.primary ? "hero-gradient hover:opacity-90" : ""} w-full sm:w-auto text-sm`}
                     asChild
                   >
                     <a href={method.href} target="_blank" rel="noopener noreferrer">
                       {method.action}
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                     </a>
                   </Button>
                 </CardContent>
@@ -110,9 +110,9 @@ const Contact = () => {
         </div>
 
         {/* Additional Resources */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8">Additional Resources</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-12 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Additional Resources</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {resources.map((resource, index) => {
               const IconComponent = resource.icon;
               return (

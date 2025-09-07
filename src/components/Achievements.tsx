@@ -61,13 +61,13 @@ const Achievements = () => {
         </div>
 
         {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-12 sm:mb-16">
           {metrics.map((metric, index) => (
-            <Card key={index} className="text-center p-4 card-shadow hover:card-hover-shadow transition-all duration-300">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
+            <Card key={index} className="text-center p-3 sm:p-4 card-shadow hover:card-hover-shadow transition-all duration-300">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">
                 {metric.value}
               </div>
-              <div className="text-sm font-semibold text-foreground mb-1">
+              <div className="text-xs sm:text-sm font-semibold text-foreground mb-1">
                 {metric.label}
               </div>
               <div className="text-xs text-muted-foreground">
@@ -78,14 +78,14 @@ const Achievements = () => {
         </div>
 
         {/* Detailed Achievements */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {achievements.map((achievement, index) => {
             const IconComponent = achievement.icon;
             return (
               <Card key={index} className="card-shadow hover:card-hover-shadow transition-all duration-300">
-                <CardHeader className="flex flex-row items-start space-y-0 pb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg mr-4">
-                    <IconComponent className="h-6 w-6 text-primary" />
+                <CardHeader className="flex flex-row items-start space-y-0 pb-4 p-4 sm:p-6">
+                  <div className="p-2 bg-primary/10 rounded-lg mr-3 sm:mr-4">
+                    <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">

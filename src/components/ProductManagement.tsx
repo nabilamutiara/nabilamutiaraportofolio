@@ -43,17 +43,17 @@ const ProductManagement = () => {
   return (
     <section id="product-management" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Product Management Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Strategic product initiatives from concept to launch, focusing on user needs, 
             business goals, and data-driven decision making.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -63,51 +63,51 @@ const ProductManagement = () => {
           ))}
         </div>
 
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+        <div className="mt-12 sm:mt-16">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
               Product Management Artifacts
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground px-4">
               Detailed documentation and case studies available for review
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-card rounded-lg card-shadow">
-              <h4 className="font-semibold mb-2">PRDs & Specs</h4>
-              <p className="text-sm text-muted-foreground mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <div className="text-center p-4 sm:p-6 bg-card rounded-lg card-shadow">
+              <h4 className="font-semibold mb-2 text-sm sm:text-base">PRDs & Specs</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4">
                 Comprehensive product requirements and technical specifications
               </p>
               <a 
                 href="#" 
-                className="text-primary hover:underline text-sm font-medium"
+                className="text-primary hover:underline text-xs sm:text-sm font-medium"
               >
                 View Documents →
               </a>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg card-shadow">
-              <h4 className="font-semibold mb-2">User Research</h4>
-              <p className="text-sm text-muted-foreground mb-4">
+            <div className="text-center p-4 sm:p-6 bg-card rounded-lg card-shadow">
+              <h4 className="font-semibold mb-2 text-sm sm:text-base">User Research</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4">
                 User interviews, surveys, and usability testing reports
               </p>
               <a 
                 href="#" 
-                className="text-primary hover:underline text-sm font-medium"
+                className="text-primary hover:underline text-xs sm:text-sm font-medium"
               >
                 View Research →
               </a>
             </div>
             
-            <div className="text-center p-6 bg-card rounded-lg card-shadow">
-              <h4 className="font-semibold mb-2">Design Artifacts</h4>
-              <p className="text-sm text-muted-foreground mb-4">
+            <div className="text-center p-4 sm:p-6 bg-card rounded-lg card-shadow sm:col-span-2 lg:col-span-1">
+              <h4 className="font-semibold mb-2 text-sm sm:text-base">Design Artifacts</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4">
                 Wireframes, prototypes, and design system documentation
               </p>
               <a 
                 href="#" 
-                className="text-primary hover:underline text-sm font-medium"
+                className="text-primary hover:underline text-xs sm:text-sm font-medium"
               >
                 View Designs →
               </a>

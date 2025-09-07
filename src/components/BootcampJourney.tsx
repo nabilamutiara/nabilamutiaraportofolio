@@ -52,41 +52,43 @@ const BootcampJourney = () => {
   ];
 
   return (
-    <section id="bootcamp-journey" className="py-20">
+    <section id="bootcamp-journey" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Bootcamp Project Journey
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             A structured 20-week intensive program that transformed me from 
             a beginner to a full-stack developer with hands-on project experience.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {milestones.map((milestone, index) => (
             <Card key={index} className="card-shadow hover:card-hover-shadow transition-all duration-300">
-              <CardHeader className="flex flex-row items-start space-y-0 pb-4">
+              <CardHeader className="flex flex-col sm:flex-row sm:items-start space-y-2 sm:space-y-0 pb-4 p-4 sm:p-6">
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <Badge variant="outline" className="text-xs">
-                      {milestone.duration}
-                    </Badge>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                      <Badge variant="outline" className="text-xs">
+                        {milestone.duration}
+                      </Badge>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl mb-2">
+                  <CardTitle className="text-lg sm:text-xl mb-2">
                     {milestone.phase}: {milestone.title}
                   </CardTitle>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-sm sm:text-base">
                     {milestone.description}
                   </CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 p-4 sm:p-6">
                 <div>
-                  <h4 className="font-semibold mb-2">Skills Developed:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold mb-2 text-sm sm:text-base">Skills Developed:</h4>
+                  <div className="flex flex-wrap gap-1 sm:gap-2">
                     {milestone.skills.map((skill, skillIndex) => (
                       <Badge key={skillIndex} variant="secondary" className="text-xs">
                         {skill}
@@ -96,29 +98,29 @@ const BootcampJourney = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-primary mb-2">Key Outcome:</h4>
-                  <p className="text-sm text-muted-foreground">{milestone.outcome}</p>
+                  <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">Key Outcome:</h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{milestone.outcome}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Card className="p-8 hero-gradient text-white max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Bootcamp Impact</h3>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
+        <div className="mt-8 sm:mt-12 text-center">
+          <Card className="p-6 sm:p-8 hero-gradient text-white max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">Bootcamp Impact</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-3xl font-bold mb-1">100%</div>
-                <div className="text-sm opacity-90">Completion Rate</div>
+                <div className="text-2xl sm:text-3xl font-bold mb-1">100%</div>
+                <div className="text-xs sm:text-sm opacity-90">Completion Rate</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-1">15+</div>
-                <div className="text-sm opacity-90">Projects Built</div>
+                <div className="text-2xl sm:text-3xl font-bold mb-1">15+</div>
+                <div className="text-xs sm:text-sm opacity-90">Projects Built</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-1">Top 5%</div>
-                <div className="text-sm opacity-90">Class Ranking</div>
+                <div className="text-2xl sm:text-3xl font-bold mb-1">Top 5%</div>
+                <div className="text-xs sm:text-sm opacity-90">Class Ranking</div>
               </div>
             </div>
           </Card>

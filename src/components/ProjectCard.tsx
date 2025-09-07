@@ -34,26 +34,27 @@ const ProjectCard = ({
             src={imageUrl} 
             alt={title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
           />
         </div>
       )}
-      <CardHeader>
-        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors">
           {title}
         </CardTitle>
-        <CardDescription className="text-base">
+        <CardDescription className="text-sm sm:text-base">
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 p-4 sm:p-6">
         <div>
-          <h4 className="font-semibold text-primary mb-2">Impact:</h4>
-          <p className="text-sm text-muted-foreground">{impact}</p>
+          <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">Impact:</h4>
+          <p className="text-xs sm:text-sm text-muted-foreground">{impact}</p>
         </div>
         
         <div>
-          <h4 className="font-semibold mb-2">Technologies & Skills:</h4>
-          <div className="flex flex-wrap gap-2">
+          <h4 className="font-semibold mb-2 text-sm sm:text-base">Technologies & Skills:</h4>
+          <div className="flex flex-wrap gap-1 sm:gap-2">
             {keywords.map((keyword, index) => (
               <Badge key={index} variant="secondary" className="text-xs">
                 {keyword}
@@ -64,25 +65,25 @@ const ProjectCard = ({
 
         <div className="flex flex-wrap gap-2 pt-4">
           {githubUrl && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild className="text-xs sm:text-sm">
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" />
+                <Github className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 Code
               </a>
             </Button>
           )}
           {demoUrl && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild className="text-xs sm:text-sm">
               <a href={demoUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
+                <ExternalLink className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 Demo
               </a>
             </Button>
           )}
           {documentUrl && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild className="text-xs sm:text-sm">
               <a href={documentUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
+                <ExternalLink className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 {type === 'product' ? 'Case Study' : 'Documentation'}
               </a>
             </Button>
