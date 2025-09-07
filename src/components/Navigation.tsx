@@ -17,9 +17,9 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#hero' },
+    { name: 'Product Management', href: '#product-management' },
     { name: 'Full Stack Projects', href: '#fullstack-projects' },
     { name: 'Bootcamp Journey', href: '#bootcamp-journey' },
-    { name: 'Product Management', href: '#product-management' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },

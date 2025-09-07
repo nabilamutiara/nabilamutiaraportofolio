@@ -13,9 +13,9 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
+        <ProductManagement />
         <FullStackProjects />
         <BootcampJourney />
-        <ProductManagement />
         <Achievements />
         <Experience />
         <Contact />

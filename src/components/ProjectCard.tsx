@@ -12,6 +12,7 @@ interface ProjectCardProps {
   demoUrl?: string;
   documentUrl?: string;
   type: 'fullstack' | 'product';
+  imageUrl?: string;
 }
 
 const ProjectCard = ({ 
@@ -22,10 +23,20 @@ const ProjectCard = ({
   githubUrl, 
   demoUrl, 
   documentUrl, 
-  type 
+  type,
+  imageUrl 
 }: ProjectCardProps) => {
   return (
-    <Card className="h-full card-shadow hover:card-hover-shadow transition-all duration-300 group">
+    <Card className="h-full card-shadow hover:card-hover-shadow transition-all duration-300 group overflow-hidden">
+      {imageUrl && (
+        <div className="aspect-video w-full overflow-hidden">
+          <img 
+            src={imageUrl} 
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
       <CardHeader>
         <CardTitle className="text-xl group-hover:text-primary transition-colors">
           {title}
