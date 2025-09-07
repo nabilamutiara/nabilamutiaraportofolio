@@ -1,44 +1,53 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Building, Users, Calendar } from 'lucide-react';
+import { Building, Users, Calendar, Target, Code, BookOpen } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
-      organization: "Tech Student Association",
-      role: "Product Lead",
-      period: "2022 - 2023",
-      type: "Student Organization",
-      description: "Led a team of 15 students to develop digital solutions for campus problems. Managed product roadmap and coordinated with university administration.",
-      impact: "Launched 3 student-focused applications used by 2000+ students daily",
-      skills: ["Product Strategy", "Team Leadership", "Stakeholder Management", "Agile", "Cross-functional Collaboration"]
+      organization: "Aibeecara Indonesia",
+      role: "Founder & CPO",
+      period: "Jul 2024 – Present",
+      type: "Startup",
+      description: "Leading end-to-end development of an educational technology application, managing cross-functional teams and company operations.",
+      impact: "Conducted user research with 200+ participants achieving 70-80% SUS satisfaction, organized recruitment attracting 200+ applicants",
+      skills: ["Product Strategy", "Team Leadership", "User Research", "Go-to-Market", "Fundraising", "Product Development"]
     },
     {
-      organization: "Startup Incubator Program",
-      role: "Product Manager Intern",
-      period: "2022",
+      organization: "PT. Winnicode Garuda Indonesia",
+      role: "Full Stack Developer Intern",
+      period: "Jan 2025 – Jun 2025",
       type: "Professional Experience",
-      description: "Worked with early-stage startups to define product strategy, conduct user research, and validate product-market fit.",
-      impact: "Helped 5 startups refine their MVP and secure seed funding totaling $2M",
-      skills: ["Product Discovery", "User Research", "MVP Development", "Market Analysis", "Pitch Preparation"]
+      description: "Developed fully integrated web portals and admin panels using modern technologies including MERN stack and Next.js.",
+      impact: "Built 20+ pages with 12+ features including data analytics, hoax detector, sentiment analysis, and automated news builder",
+      skills: ["Full-Stack Development", "MongoDB", "Express.js", "React.js", "Next.js", "API Development"]
     },
     {
-      organization: "University Developer Club",
-      role: "Technical Lead",
-      period: "2021 - 2022",
+      organization: "BEM ITS",
+      role: "Vice Minister of Creative Economy",
+      period: "Mar 2025 – Present",
       type: "Student Organization",
-      description: "Mentored 30+ students in full-stack development and organized technical workshops and hackathons.",
-      impact: "Increased club membership by 200% and organized 5 successful hackathons",
-      skills: ["Technical Mentorship", "Workshop Planning", "Community Building", "Full-Stack Development"]
+      description: "Leading and overseeing a team of 18 staff members in the creative economy ministry of student government.",
+      impact: "Coordinated HR mapping and development, represented ministry in meetings and programs",
+      skills: ["Team Leadership", "HR Management", "Strategic Planning", "Stakeholder Representation"]
     },
     {
-      organization: "Local NGO - Digital Initiative",
-      role: "Volunteer Product Coordinator",
-      period: "2021",
-      type: "Volunteer Work",
-      description: "Coordinated digital transformation efforts for local non-profit, including website redesign and donor management system.",
-      impact: "Improved donor engagement by 40% and streamlined volunteer coordination",
-      skills: ["Non-profit Technology", "Stakeholder Communication", "Digital Transformation", "Volunteer Management"]
+      organization: "HIMATEKKOM ITS",
+      role: "Expert Staff (Website Product Manager)",
+      period: "Mar 2025 – Present",
+      type: "Student Association",
+      description: "Managing website development as Product Manager, coordinating between developers and UI/UX teams.",
+      impact: "Led weekly project meetings, created PRDs, managed cross-functional team of 4 members using Trello and Kanban",
+      skills: ["Product Management", "Agile Methodology", "Cross-functional Coordination", "PRD Development"]
+    },
+    {
+      organization: "TDC ITS",
+      role: "Manager of Business Production",
+      period: "Jan 2024 – Dec 2024",
+      type: "Student Organization",
+      description: "Managed business production operations and workflow across teams in a student business unit.",
+      impact: "Achieved 92% KPI target, delegated work program tasks to 13-member team, oversaw production activities",
+      skills: ["Operations Management", "Team Management", "KPI Tracking", "Workflow Optimization"]
     }
   ];
 
@@ -47,11 +56,11 @@ const Experience = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Organization Experience
+            Professional & Organizational Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Leadership roles and collaborative experiences that shaped my product management 
-            and technical skills while creating meaningful impact.
+            Leadership roles and professional experiences that have shaped my product management, 
+            technical, and organizational skills while creating meaningful impact.
           </p>
         </div>
 
@@ -60,7 +69,9 @@ const Experience = () => {
             <Card key={index} className="card-shadow hover:card-hover-shadow transition-all duration-300">
               <CardHeader className="flex flex-row items-start space-y-0 pb-4">
                 <div className="p-2 bg-primary/10 rounded-lg mr-4">
-                  <Building className="h-6 w-6 text-primary" />
+                  {exp.type === "Startup" ? <Target className="h-6 w-6 text-primary" /> : 
+                   exp.type === "Professional Experience" ? <Code className="h-6 w-6 text-primary" /> : 
+                   <Building className="h-6 w-6 text-primary" />}
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
@@ -115,23 +126,23 @@ const Experience = () => {
         {/* Leadership Summary */}
         <div className="mt-16">
           <Card className="p-8 card-shadow">
-            <h3 className="text-2xl font-bold text-center mb-8">Leadership Impact Summary</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">Experience Impact Summary</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Team Members Led</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">8</div>
-                <div className="text-sm text-muted-foreground">Organizations Involved</div>
+                <div className="text-3xl font-bold text-primary mb-2">200+</div>
+                <div className="text-sm text-muted-foreground">Research Participants</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">2000+</div>
-                <div className="text-sm text-muted-foreground">People Impacted</div>
+                <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                <div className="text-sm text-muted-foreground">Organizations</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">5</div>
-                <div className="text-sm text-muted-foreground">Events Organized</div>
+                <div className="text-3xl font-bold text-primary mb-2">92%</div>
+                <div className="text-sm text-muted-foreground">KPI Achievement</div>
               </div>
             </div>
           </Card>

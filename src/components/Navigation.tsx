@@ -17,9 +17,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#hero' },
-    { name: 'Product Management', href: '#product-management' },
-    { name: 'Full Stack Projects', href: '#fullstack-projects' },
-    { name: 'Bootcamp Journey', href: '#bootcamp-journey' },
+    { name: 'Product Management Journey', href: '#bootcamp-journey' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
@@ -69,13 +67,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border shadow-lg">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
             <div className="py-4 px-4 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-muted/50 transition-colors rounded-lg"
+                  className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-muted transition-colors rounded-lg"
                 >
                   {item.name}
                 </button>
@@ -83,6 +81,7 @@ const Navigation = () => {
             </div>
           </div>
         )}
+
       </div>
     </nav>
   );

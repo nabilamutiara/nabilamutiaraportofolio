@@ -30,37 +30,6 @@ const Contact = () => {
     }
   ];
 
-  const resources = [
-    {
-      icon: Download,
-      title: "Resume / CV",
-      description: "Detailed professional background and experience",
-      action: "Download PDF",
-      href: "#"
-    },
-    {
-      icon: FileText,
-      title: "Portfolio PPT",
-      description: "Comprehensive project presentations",
-      action: "View Slides",
-      href: "#"
-    },
-    {
-      icon: Video,
-      title: "Demo Videos",
-      description: "Product demonstrations and case studies",
-      action: "Watch Videos",
-      href: "#"
-    },
-    {
-      icon: Camera,
-      title: "Project Photos",
-      description: "Visual documentation of work and achievements",
-      action: "View Gallery",
-      href: "#"
-    }
-  ];
-
   return (
     <section id="contact" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
@@ -95,7 +64,11 @@ const Contact = () => {
                 <CardContent className="p-4 sm:p-6 pt-0">
                   <Button 
                     variant={method.primary ? "default" : "outline"} 
-                    className={`${method.primary ? "hero-gradient hover:opacity-90" : ""} w-full sm:w-auto text-sm`}
+                    className={`w-full text-sm transition-all duration-200 ${
+                      method.primary 
+                        ? "hero-gradient hover:opacity-90 text-primary-foreground" 
+                        : "border-primary/20 text-foreground hover:bg-primary/10"
+                    }`}
                     asChild
                   >
                     <a href={method.href} target="_blank" rel="noopener noreferrer">
@@ -109,34 +82,6 @@ const Contact = () => {
           })}
         </div>
 
-        {/* Additional Resources */}
-        <div className="mb-12 sm:mb-16">
-          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Additional Resources</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {resources.map((resource, index) => {
-              const IconComponent = resource.icon;
-              return (
-                <Card key={index} className="text-center card-shadow hover:card-hover-shadow transition-all duration-300">
-                  <CardHeader className="pb-4">
-                    <div className="mx-auto p-2 bg-secondary rounded-lg w-fit mb-2">
-                      <IconComponent className="h-5 w-5 text-primary" />
-                    </div>
-                    <CardTitle className="text-base">{resource.title}</CardTitle>
-                    <CardDescription className="text-sm">{resource.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={resource.href}>
-                        {resource.action}
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-
         {/* Testimonials Section */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center mb-8">What People Say</h3>
@@ -145,7 +90,11 @@ const Contact = () => {
               "For LinkedIn recommendations and detailed testimonials from colleagues, 
               mentors, and team members, please visit my LinkedIn profile."
             </p>
-            <Button variant="outline" asChild>
+            <Button 
+              variant="outline" 
+              className="border-primary/20 text-foreground hover:bg-primary/10 transition-colors"
+              asChild
+            >
               <a href="https://linkedin.com/in/nabila-mutiara" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-4 w-4" />
                 View LinkedIn Recommendations
@@ -167,7 +116,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-primary hover:bg-gray-100 transition-colors"
+                className="bg-white text-primary hover:bg-gray-100 transition-colors font-medium"
                 asChild
               >
                 <a href="mailto:nabila.mutiara@email.com">
@@ -178,7 +127,7 @@ const Contact = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white/30 text-white hover:bg-white/10 transition-colors"
+                className="border-white/30 text-white hover:bg-white/10 transition-colors font-medium"
                 asChild
               >
                 <a href="#">

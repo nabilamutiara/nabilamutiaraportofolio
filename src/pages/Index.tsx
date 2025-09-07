@@ -13,8 +13,6 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <ProductManagement />
-        <FullStackProjects />
         <BootcampJourney />
         <Achievements />
         <Experience />

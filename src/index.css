@@ -39,26 +39,19 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --hero-gradient: linear-gradient(135deg, 220 91% 55%, 220 91% 45%);
+    --hero-gradient: linear-gradient(135deg, hsl(217 91% 60%), hsl(190 95% 39%));
     --card-shadow: 0 4px 20px -4px hsl(220 91% 55% / 0.15);
     --card-hover-shadow: 0 8px 32px -4px hsl(220 91% 55% / 0.25);
     --section-bg: 220 20% 98%;
     --text-muted: 215 16% 57%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -92,7 +85,7 @@ All colors MUST be HSL.
     --ring: 220 91% 55%;
 
     /* Dark mode custom colors */
-    --hero-gradient: linear-gradient(135deg, 220 91% 55%, 220 91% 45%);
+    --hero-gradient: linear-gradient(135deg, hsl(220 91% 55%), hsl(220 91% 45%));
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --card-hover-shadow: 0 8px 32px -4px hsl(0 0% 0% / 0.5);
     --section-bg: 215 25% 20%;
@@ -125,21 +118,48 @@ All colors MUST be HSL.
 @layer utilities {
   .hero-gradient {
     background: var(--hero-gradient);
+    transition: background-position 0.5s ease, transform 0.3s ease;
+    background-size: 200% 200%;
+    background-position: left center;
   }
-  
+  .hero-gradient:hover {
+    background-position: right center;
+    transform: translateY(-2px) scale(1.02);
+  }
+
   .card-shadow {
     box-shadow: var(--card-shadow);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  
+  .card-shadow:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-4px);
+  }
+
   .card-hover-shadow {
     box-shadow: var(--card-hover-shadow);
   }
-  
+
   .section-bg {
     background-color: hsl(var(--section-bg));
   }
-  
+
   .text-muted {
     color: hsl(var(--text-muted));
+  }
+
+  /* Subtle floating animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* Glow effect */
+  .glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.6),
+                0 0 40px hsl(var(--primary) / 0.4);
   }
 }
