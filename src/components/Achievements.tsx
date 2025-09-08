@@ -147,12 +147,7 @@ const Achievements = () => {
               >
                 Get In Touch
               </a>
-              <a 
-                href="#" 
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View Certificates
-              </a>
+              
             </div>
           </Card>
         </div>

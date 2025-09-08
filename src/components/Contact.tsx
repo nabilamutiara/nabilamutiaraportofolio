@@ -9,7 +9,7 @@ const Contact = () => {
       title: "Email",
       description: "nabila.mutiara@email.com",
       action: "Send Email",
-      href: "mailto:nabila.mutiara@email.com",
+      href: "mailto:nabilamutiara1240@email.com",
       primary: true
     },
     {
@@ -17,16 +17,16 @@ const Contact = () => {
       title: "LinkedIn",
       description: "Connect for professional networking",
       action: "View Profile",
-      href: "https://linkedin.com/in/nabila-mutiara",
-      primary: false
+      href: "https://www.linkedin.com/in/nabilamutiarasusetio",
+      primary: true
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Quick messages and calls",
       action: "Message Me",
-      href: "https://wa.me/1234567890",
-      primary: false
+      href: "https://wa.me/0815559938908",
+      primary: true
     }
   ];
 
@@ -87,19 +87,23 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-center mb-8">What People Say</h3>
           <Card className="p-8 card-shadow max-w-2xl mx-auto text-center">
             <p className="text-lg italic text-muted-foreground mb-4">
-              "For LinkedIn recommendations and detailed testimonials from colleagues, 
-              mentors, and team members, please visit my LinkedIn profile."
+              "I feel incredibly fortunate to have worked with Nabila, an inspiring leader with an exceptional ability to make strategic decisions. Her skill in setting a clear vision and guiding the team toward short-, medium-, and long-term goals is truly remarkable. Nabila is a visionary who keenly identifies trends and opportunities, ensuring that each direction taken is both relevant and strategic. Every decision she makes is grounded in careful analysis, which instills a high level of trust within the team and lays a solid foundation for the company's success. Nabila’s leadership and vision have made a significant positive impact, a leader who is not only highly capable but also inspires everyone around her to give their best. - Abimanyu"
             </p>
             <Button 
               variant="outline" 
               className="border-primary/20 text-foreground hover:bg-primary/10 transition-colors"
               asChild
             >
-              <a href="https://linkedin.com/in/nabila-mutiara" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://www.linkedin.com/in/nabilamutiarasusetio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="mr-2 h-4 w-4" />
                 View LinkedIn Recommendations
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
+
             </Button>
           </Card>
         </div>
@@ -110,8 +114,9 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-4">Ready to Work Together?</h3>
             <p className="text-lg mb-6 opacity-90">
               Whether you're looking for a Product Manager to drive strategic initiatives, 
-              a Full-stack Developer to build innovative solutions, or someone who can bridge 
-              both worlds - I'm here to help create impactful products.
+              align cross-functional teams, and deliver impactful products, 
+              I'm here to help turn ideas into successful outcomes.
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -119,18 +124,17 @@ const Contact = () => {
                 className="bg-white text-primary hover:bg-gray-100 transition-colors font-medium"
                 asChild
               >
-                <a href="mailto:nabila.mutiara@email.com">
+                <a href="mailto:nabilamutiara1240@gmail.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Get In Touch
                 </a>
               </Button>
               <Button 
-                variant="outline" 
                 size="lg" 
-                className="border-white/30 text-white hover:bg-white/10 transition-colors font-medium"
+                className="bg-white text-primary hover:bg-gray-100 transition-colors font-medium"
                 asChild
               >
-                <a href="#">
+                <a href="https://drive.google.com/file/d/1QRcwPSN6qWbI2tdjKD9jXafttQbzuMrv/view?usp=sharing">
                   <Download className="mr-2 h-5 w-5" />
                   Download CV
                 </a>

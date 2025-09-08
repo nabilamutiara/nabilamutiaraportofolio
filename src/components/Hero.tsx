@@ -25,12 +25,12 @@ const Hero = () => {
               <span className="block text-primary mt-2">Nabila Mutiara Susetio</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-              Product Manager passionate about designing user-centered digital solutions that deliver business impact and elevate user experience
+              I am a Product Manager, passionate about designing user-centered digital solutions that deliver business impact and enhance the user experience.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 px-4">
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://drive.google.com/file/d/1QRcwPSN6qWbI2tdjKD9jXafttQbzuMrv/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:opacity-90 transition-opacity"
@@ -40,7 +40,7 @@ const Hero = () => {
               </Button>
             </a>
 
-            <a href="https://www.linkedin.com/in/dummy" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://www.linkedin.com/in/nabilamutiarasusetio" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:opacity-90 transition-opacity"
@@ -51,7 +51,7 @@ const Hero = () => {
               </Button>
             </a>
 
-            <a href="mailto:dummy@email.com" className="w-full sm:w-auto">
+            <a href="mailto:nabilamutiara1240@gmail.com" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:opacity-90 transition-opacity"
@@ -68,11 +68,11 @@ const Hero = () => {
               <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
             </Card>
             <Card className="p-4 sm:p-6 card-shadow hover:card-hover-shadow transition-all duration-300">
-              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">3+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">15+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Projects Delivered</div>
             </Card>
             <Card className="p-4 sm:p-6 card-shadow hover:card-hover-shadow transition-all duration-300">
-              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">6</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">6+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Awards Won</div>
             </Card>
           </div>

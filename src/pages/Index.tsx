@@ -12,6 +12,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <main>
+        <div className="background-flow">
+          
+        </div>
         <Hero />
         <BootcampJourney />
         <Achievements />
